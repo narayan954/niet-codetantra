@@ -15,3 +15,18 @@ class LinearSearch{
 		System.out.println("Search element " + key + " is not found");
 	}
 }
+
+public class LinearSearchMain{
+		public static void main(String[] args){
+		int[] array = new int[args.length];
+		int n = args.length-1;
+		
+			for (int i = 0; i < n; i++)
+			{
+		      array[i] = Integer.parseInt(args[i]);
+			}
+			int key = Integer.parseInt(args[n]);
+			LinearSearch lSearch = new LinearSearch();
+			lSearch.linearSearch(array, key);
+	}
+}
