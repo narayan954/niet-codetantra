@@ -1,7 +1,7 @@
-# List of programs as mentioned in the lab
+# List of programs in the lab
 
 | Lab no. | Description |
-| :-- | :---- |
+| :------ | :---------- |
 |1|   Program to create and display Linear Array.
 |2|	  Program to insert data item at any position in an array.	
 |3| 	Program to delete a data item from a linear array.
