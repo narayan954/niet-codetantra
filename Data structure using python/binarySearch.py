@@ -1,18 +1,16 @@
-def binary_search(ls, l, r, q):
-	if r >= l:
-		mid = l + (r - l)//2
-		if ls[mid] == q:
-			return mid
-		elif ls[mid] > q:
-			return binary_search(ls, l, mid-1, q)
-		else:
-			return binary_search(ls, mid+1, r, q)
-	else:
+def binary_search(ls,l,r,q):
+	if r < l:
 		return -1
+	mid  = l + (r-l)//2
+	if ls[mid] > q:
+		return binary_search(ls, l, mid-1, q)
+	elif ls[mid] < q:
+		return binary_search(ls, mid+1, r, q)
+	return mid
 
-ls = [int(input('Enter your number: ')) for _ in range(int(input('Enter size of list: ')))]
-ls.sort()
-print('After sorting list is: ',ls)
-q = int(input('The number to search for: '))
-result = binary_search(ls, 0, len(ls)-1, q)
-print(f'{q} was found at index {result}.')
+n = int(input('Enter no of elements'))
+print('enter elements')
+ls = [int(input()) for _ in range(n)]
+q = int(input(' Which element you want to search'))
+answer = binary_search(ls, 0, len(ls)-1,q)
+print(f'The element is present at index  {answer}')
