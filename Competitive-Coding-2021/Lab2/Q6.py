@@ -4,6 +4,7 @@ S = sys.argv[1]
 
 arr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
+
 def reverseAlphas(S):
     arr1 = []
     for i in S:
@@ -16,5 +17,6 @@ def reverseAlphas(S):
         else:
             ans += i
     return ans
+
 
 print(reverseAlphas(S))

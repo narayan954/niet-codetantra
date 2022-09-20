@@ -2,11 +2,12 @@ import sys
 
 S = sys.argv[1]
 
+
 def consecutiveString(S):
     ans = ''
-    stack = s[0]
-    for i in range(len(S) -1):
-        if S[i+1]!=stack[-1]:
+    stack = S[0]
+    for i in range(len(S) - 1):
+        if S[i+1] != stack[-1]:
             ans += stack
             stack = S[i+1]
         else:
@@ -14,4 +15,6 @@ def consecutiveString(S):
             if len(stack) > 2:
                 stack = stack[:2]
     return ans+stack
+
+
 print(consecutiveString(S))
