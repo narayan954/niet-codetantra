@@ -4,18 +4,10 @@ n = int(sys.argv[1])
 
 
 def isPrime(n):
-    if (n == 3):
-        return 1
-    if (n % 2 == 0 or n % 3 == 0):
-        return 0
-    i = 5
-    while (i * i <= n):
-        if (n % i == 0 or
-                n % (i + 2) == 0):
-            return 0
-        i = i + 6
-    return 1
-
+    for i in range(2,int(n**0.5)+1):
+        if n%i == 0:
+            return False
+    return True     
 
 def primeSum(n):
     count = 0
@@ -31,7 +23,7 @@ def primeSum(n):
         sum += primevector[i]
         if (sum > n):
             break
-        if isPrime(sum):
+        if sum<=n and isPrime(sum):
             count += 1
     return count
 
