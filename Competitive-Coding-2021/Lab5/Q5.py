@@ -21,7 +21,7 @@ def insertLevelOrder(arr, i, n):
 def inOrder(root):
 	if root != None and root.data != '-':
 		inOrder(root.left)
-		ans.append(root.data,end=" ")
+		ans.append(root.data)
 		inOrder(root.right)
 
 def binarySearchTreeTraversal(string, key):
