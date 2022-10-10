@@ -32,4 +32,4 @@ def preOrderElement(treeStr, n):
   preorder(root)
   return ans[n-1]
 
-print(infixElement(treeStr,n))
+print(preOrderElement(treeStr,n))
